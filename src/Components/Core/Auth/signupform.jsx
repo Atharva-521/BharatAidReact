@@ -1,6 +1,8 @@
 import React from 'react'
 import Button from '../Home/button'
 const Signupform = () => {
+
+  
   return (
     <div className='bg-formbg w-[45rem] rounded-3xl pb-7 mt-10 shadow'>
       <h2 className='text-4xl mt-10 translate-x-14'>Sign up</h2>
