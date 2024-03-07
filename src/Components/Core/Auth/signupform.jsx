@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '../Home/button'
 const Signupform = () => {
 
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  const signupData = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: ""
+  }
+
+  const changeHandler = (e) => {
+    
+  }
   
   return (
     <div className='bg-formbg w-[45rem] rounded-3xl pb-7 mt-10 shadow'>
@@ -37,7 +52,7 @@ const Signupform = () => {
 
             <div className='flex gap-6'>
               <input required type='text' name='country' className='w-20 rounded-md h-8' />
-              <input required type='text' name='Phone' className='rounded-md w-[100%]  h-8' />
+              <input required type='text' name='phone' className='rounded-md w-[100%]  h-8' />
             </div>
           </div>
 
