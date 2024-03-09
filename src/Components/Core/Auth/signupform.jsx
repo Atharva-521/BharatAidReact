@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Button from '../Home/button'
-import setSignupData from '../../../Slices/authSlice'
-import useDispatch from 'react-redux'
+import {setSignupData} from '../../../Slices/authSlice'
+import {useDispatch} from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import sendOtp from '../../../Services/sendOtp'
 
@@ -27,6 +27,7 @@ const Signupform = () => {
       ...prevState,
       [e.target.name] : e.target.value
     }))
+    console.log(formData);
   }
 
   const submitHandler = (e) => {
@@ -38,21 +39,23 @@ const Signupform = () => {
     }
 
     dispatch(setSignupData(formData));
-
-    sendOtp(formData.email, navigate);
+    console.log(formData);
+    sendOtp(formData.email, navigate)
+  
 
     //reset Data
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      password: "",
-      confirmPassword: ""
-    })
+    // setFormData({
+    //   firstName: "",
+    //   lastName: "",
+    //   email: "",
+    //   phone: "",
+    //   password: "",
+    //   confirmPassword: ""
+    // })
     
-
   }
+
+
   
   return (
     <div className='bg-formbg w-[45rem] rounded-3xl pb-7 mt-10 shadow'>
@@ -65,13 +68,13 @@ const Signupform = () => {
             {/* First Name */}
             <div>
               <p className='text-lg'>First Name</p>
-              <input required type='text' name='firstName' className='rounded-md w-64 h-8' onChange={(e) => (changeHandler(e))} />
+              <input required type='text' name='firstName' className='rounded-md w-64 h-8 text-black' onChange={(e) => (changeHandler(e))} />
             </div>
 
             {/* Last Name */}
             <div>
               <p className='text-lg'>Last Name</p>
-              <input required type='text' name='lastName' className='rounded-md w-64 h-8' onChange={(e) => (changeHandler(e))}  />
+              <input required type='text' name='lastName' className='rounded-md w-64 h-8 text-black' onChange={(e) => (changeHandler(e))}  />
             </div>
             
           </div>
@@ -87,8 +90,8 @@ const Signupform = () => {
             <p className='text-lg'>Phone Number</p>
 
             <div className='flex gap-6'>
-              <input required type='text' name='country' className='w-20 rounded-md h-8' onChange={(e) => (changeHandler(e))} />
-              <input required type='text' name='phone' className='rounded-md w-[100%]  h-8' onChange={(e) => (changeHandler(e))} />
+              <input required type='text' name='country' className='w-20 rounded-md h-8 text-black' onChange={(e) => (changeHandler(e))} />
+              <input required type='text' name='phone' className='rounded-md w-[100%]  h-8 text-black' onChange={(e) => (changeHandler(e))} />
             </div>
           </div>
 
@@ -96,17 +99,19 @@ const Signupform = () => {
           <div className='flex gap-48'>
             <div>
               <p className='text-lg'>Create Password</p>
-              <input required type='password' name='password' className='rounded-md w-[145%] h-8' onChange={(e) => (changeHandler(e))} />
+              <input required type='password' name='password' className='rounded-md w-[145%] h-8 text-black' onChange={(e) => (changeHandler(e))} />
             </div>
 
             <div>
               <p className='text-lg'>Confirm Password</p>
-              <input required type='password' name='confirmPassword' className='rounded-md w-[145%] h-8' onChange={(e) => (changeHandler(e))} />
+              <input required type='password' name='confirmPassword' className='rounded-md w-[145%] h-8 text-black' onChange={(e) => (changeHandler(e))} />
             </div>
           </div>
 
-          <div className='bg-lemonyellow text-black flex justify-center items-center w-80 h-10 rounded-xl mx-auto'>
-            <input type='submit' value={'Create Account'} onChange={(e) => (changeHandler(e))} />
+          <div className='bg-lemonyellow text-black flex justify-center items-center w-80 h-10 rounded-xl mx-auto '>
+            <button onChange={(e) => (changeHandler(e))} >
+              Create Account
+            </button>
           </div>
         </form>
       </div>

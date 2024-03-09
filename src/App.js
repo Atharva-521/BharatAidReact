@@ -2,6 +2,7 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Homepage from './Pages/Homepage';
 import Signup from './Pages/Signup'
+import { EmailVerify } from './Pages/EmailVerify';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='/signup' element={<Signup />} />
+          <Route path='/verify-email' element={<EmailVerify />} />
         </Routes>
 
 
