@@ -16,7 +16,7 @@ const Signupform = () => {
     firstName: "",
     lastName: "",
     email: "",
-    phone: "",
+    phoneNumber: "",
     password: "",
     confirmPassword: ""
   })
@@ -91,7 +91,7 @@ const Signupform = () => {
 
             <div className='flex gap-6'>
               <input required type='text' name='country' className='w-20 rounded-md h-8 text-black' onChange={(e) => (changeHandler(e))} />
-              <input required type='text' name='phone' className='rounded-md w-[100%]  h-8 text-black' onChange={(e) => (changeHandler(e))} />
+              <input required type='text' name='phoneNumber' className='rounded-md w-[100%]  h-8 text-black' onChange={(e) => (changeHandler(e))} />
             </div>
           </div>
 

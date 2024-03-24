@@ -20,7 +20,11 @@ module.exports = {
       backgroundImage:{
         herobg: 'linear-gradient(180deg, rgba(8, 8, 8, 0.57) 0%, rgba(23, 23, 23, 0.57) 20%, rgba(61, 61, 61, 0.57) 60%, rgba(88, 88, 88, 0.57) 85%, rgba(102, 102, 102, 0.57) 100% )',
         formbg: 'linear-gradient(180deg, rgba(28, 28, 28, 1) 0%, rgba(115, 115, 115, 1) 100% )',
-      }
+        inputbg: 'linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(130, 133, 133, 1) 100% )',
+      },
+      boxShadow:{
+        inputsh: '10px 35px 60px -15px rgba(255, 255, 255, 0.3)',
+      },
       },
   },
   plugins: [],
