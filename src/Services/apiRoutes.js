@@ -16,5 +16,12 @@ export const profileRoutes = {
     updateProfilePic : 'http://localhost:4000/api/v1/profile/uploadpicture',
 }
 
+// Reset Password
+
+export const resetRoutes = {
+    sendResetLink : 'http://localhost:4000/api/v1/reset/send-reset-link',
+    resetPassword: 'http://localhost:4000/api/v1/reset/reset-password'
+}
+
 
 //http://localhost:5000/get-prediction?date=1,2,3,4,5&systolic=150,130,140,190,180&diastolic=80,85,90,50,80

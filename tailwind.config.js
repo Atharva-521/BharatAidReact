@@ -12,10 +12,16 @@ module.exports = {
       },
       colors:{
         redbutton: '#FF1212',
+        bluebutton: '#429CDD',
         sagegreen: '#25A79F',
         rankgreen: '#1BAA5D',
         rankgreendark: "#33A266",
         lemonyellow: '#F8FB5B',
+        bgwhite: '#D9D9D9',
+        bgwhitelight: 'rgba(217, 217, 217, 0.56)',
+        inputbg: '#66ABA7',
+        greybg: '#6FBFBA',
+        profilebg: '#F9F9F9'
       },
       backgroundImage:{
         herobg: 'linear-gradient(180deg, rgba(8, 8, 8, 0.57) 0%, rgba(23, 23, 23, 0.57) 20%, rgba(61, 61, 61, 0.57) 60%, rgba(88, 88, 88, 0.57) 85%, rgba(102, 102, 102, 0.57) 100% )',
