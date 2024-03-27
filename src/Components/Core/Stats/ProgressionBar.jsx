@@ -13,6 +13,7 @@ export const ProgressionBar = ({value, text, percentage}) => {
               strokeLinecap: 'butt',
               textColor: 'rgba(41, 54, 69, 1)',
               textSize: '1.5rem',
+              backgroundColor: '#92DAD6'
             })} />;
           </div>
         </div>

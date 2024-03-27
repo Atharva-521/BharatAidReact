@@ -46,15 +46,56 @@ export const DashboardInfo = () => {
         </div>
 
         {/* graphs */}
-        <div>
+        <div className='flex flex-col gap-7'>
           {/* avg */}
-          <div>
+          <div className='w-full flex flex-col gap-11'>
+
+            <div className='flex gap-16'>
+              {/* systolic */}
+              <div className='flex w-[50%] gap-4 '>
+                <ProgressionBar percentage={percentage} />
+                <div className='bg-bgwhitelight h-40 rounded-2xl p-10 text-2xl font-bold'>
+                  Keep it up you have good average systolic blood pressure
+                </div>
+              </div>
+
+              {/* diastolic */}
+              <div className='flex w-[50%] gap-4 '>
+                <ProgressionBar percentage={percentage} />
+                <div className='bg-bgwhitelight h-40 rounded-2xl p-10 text-2xl font-bold'>
+                  Keep it up you have good average systolic blood pressure
+                </div>
+              </div>
+            </div>
+
+            <div className='flex gap-16'>
+              {/* fasting */}
+              <div className='flex w-[50%] gap-4 '>
+                <ProgressionBar percentage={percentage} />
+                <div className='bg-bgwhitelight h-40 rounded-2xl p-10 text-2xl font-bold'>
+                  Keep it up you have good average systolic blood pressure
+                </div>
+              </div>
+
+              {/* post meal */}
+              <div className='flex w-[50%] gap-4 '>
+                <ProgressionBar percentage={percentage} />
+                <div className='bg-bgwhitelight h-40 rounded-2xl p-10 text-2xl font-bold'>
+                  Keep it up you have good average systolic blood pressure
+                </div>
+              </div>
+            </div>
 
           </div>
           
           {/* alerts */}
           <div>
-            
+            <h2 className='text-3xl font-extrabold ml-10'>Alert!</h2>
+            <div className='bg-bgwhitelight h-40 rounded-2xl p-14 text-2xl font-bold'>
+              If your lifestyle remains like this your blood pressure will go at high stage 2, please contact your doctor.
+              <br />
+              If your lifestyle remains like this your sugar level will go high and can cause diabetes, please contact your doctor.
+            </div>
           </div>
         </div>
     </div>
