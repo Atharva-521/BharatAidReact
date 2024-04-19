@@ -27,6 +27,7 @@ export const LoginForm = () => {
         console.log(response)
         if(response.success){
             alert("User Logged In Successfully");
+            localStorage.setItem("token", response.token);
             navigate("/");
         }
         else{
@@ -41,30 +42,30 @@ export const LoginForm = () => {
             <div className='flex flex-col gap-5'>
                 <div>
                     <p className='flex items-center ml-4 text-xl'> <span><img src={user} className='bg-white h-6'/></span>email</p>
-                    <input type='email' name='email' id='username' className='w-full p-2 rounded-full text-black' onChange={(e) => changeHandler(e)} value={data.email} />
+                    <input type='email' name='email' id='username' className='w-full p-2 rounded-full text-black bg-bgwhite' onChange={(e) => changeHandler(e)} value={data.email} />
                 </div>
 
                 <div>
                     <p className='flex items-center ml-4 text-xl'> <img src={lock} className='bg-white h-6'/>password</p>
-                    <input type='password' name='password' id='password' className='w-full p-2 rounded-full text-black' onChange={(e) => changeHandler(e)} />
+                    <input type='password' name='password' id='password' className='w-full p-2 rounded-full text-black bg-bgwhite' onChange={(e) => changeHandler(e)} />
                     <Link  to="/forgotpass" className=' ml-[80%]'>Forgot password?</Link>
                 </div>
             </div>
 
-            <div className='bg-lemonyellow text-black flex justify-center items-center w-80 h-10 rounded-xl mx-auto '>
+            <div className='bg-greybg text-black flex justify-center items-center w-80 h-10 rounded-full mx-auto '>
                 <input type='submit' value={'Log in'} />
             </div>
 
             <div className='flex items-center gap-3 mt-2'>
-                <div className=' w-[50%] h-1 bg-white' />
+                <div className=' w-[50%] h-1 bg-black' />
                 <p className='text-2xl'>Or</p>
-                <div className=' w-[50%] h-1 bg-white' />
+                <div className=' w-[50%] h-1 bg-black' />
             </div>
 
             <div className='text-center'>
                 <p>Don't have an account, <span>
                     <Link to="/signup" >
-                        <span className='text-lemonyellow underline'>Sign up</span>
+                        <span className='text-red-500 underline'>Sign up</span>
                     </Link>
                     </span>
                 </p>

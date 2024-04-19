@@ -9,11 +9,13 @@ import { ResetPassword } from './Pages/ResetPassword';
 import { SetPassword } from './Pages/SetPassword';
 import { CheckMail } from './Pages/CheckMail';
 import { Profile } from './Pages/Profile';
+import { NavBar } from './Components/Common/NavBar';
 
 
 function App() {
   return (
     <div className="w-full   bg-white text-black font-abhaya">
+      <NavBar />
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='/signup' element={<Signup />} />
